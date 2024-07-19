@@ -1,0 +1,495 @@
+/* styles.css */
+@font-face{
+    font-family: "Louis-George";
+    src:url('fuentes/louis_george_cafe/Louis\ George\ Cafe.ttf'),
+    url('fuentes/louis_george_cafe/Louis\ George\ Cafe\ Bold.ttf'),
+    url('fuentes/louis_george_cafe/Louis\ George\ Cafe\ Bold\ Italic.ttf'),
+    url('fuentes/louis_george_cafe/Louis\ George\ Cafe\ Light.ttf'),
+    url('fuentes/louis_george_cafe/Louis\ George\ Cafe\ Light\ Italic.ttf'),
+    url('fuentes/louis_george_cafe/Louis\ George\ Cafe\ Italic.ttf');
+    font-weight: normal;
+}
+
+*, html {
+
+    scroll-behavior: smooth !important;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    --tw-bg-opacity: 1;
+    background-color: rgb(15 23 42/var(--tw-bg-opacity));
+}
+
+.cursor {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s, background-color 0.2s;
+    display: none;
+}
+
+.cursor::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(rgb(0, 42, 255), rgba(57, 132, 255, 0) 80%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0.1;
+    transition: opacity 0s;
+}
+
+
+body p{
+    color: #c5d2ed;
+}
+
+.fixed-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #c5d2ed;
+    height: 100vh;
+    position: fixed;
+    width: 50%;
+    padding: 80px;
+    box-sizing: border-box;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.typing-text {
+    margin-top: 5px;
+    min-width: 280px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "Full Stack Developer.";
+    color: #c5d2ed;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: calc(100% + 5px);
+    border-left: 3px solid rgba(15, 23, 42, 1);
+    right: 0px;
+    --tw-bg-opacity: 1;
+    background: rgb(15 23 42/var(--tw-bg-opacity));
+    animation: cur 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cur {
+    to {
+        border-left-color: #c5d2ed;
+    }
+}
+
+@keyframes words {
+    0%, 20% {
+        content: "Full Stack Developer.";
+    }
+    21%, 40% {
+        content: "VFX Pipeline Developer.";
+    }
+    41%, 60% {
+        content: "Web Developer.";
+    }
+    61%, 80% {
+        content: "Software Developer.";
+    }
+    81%, 100% {
+        content: "Technology Enthusiast.";
+    }
+}
+
+@keyframes typing {
+    10%, 15%,
+    30%, 35%,
+    50%, 55%,
+    70%, 75%,
+    90%, 95% {
+        width: 0;
+    }
+    5%, 20%,
+    25%, 40%,
+    45%, 60%,
+    65%, 80%, 85%{
+        width: 100%;
+    }
+}
+
+.profile p{
+    margin-top: 5px;
+}
+
+#nav-container {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.nav-link {
+    color: #c5d2ed;
+    text-decoration: none;
+    padding: 6px 0;
+    padding-left: 45px;
+    position: relative;
+    width: 50%;
+    transition: padding-left 0.2s, color 0.2s;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 30px;
+    height: 2px;
+    background-color: #c5d2ed;
+    transition: width 0.2s ease, background-color 0.2s;
+}
+
+.nav-link:hover::before {
+    width: 60px;
+    background-color: white;
+}
+
+.nav-link:hover {
+    font-weight: bold;
+    padding-left: 75px;
+    color: white;
+}
+
+#social {
+    display: flex;
+    margin-top: auto;
+}
+
+#social p{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#social a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-icon{
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+.main-content {
+    margin-left: 50%;
+    padding: 80px 80px 80px 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+main h2 {
+    margin-top: 40px;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-box {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    background-color: #c5d2ed;
+    flex-shrink: 0;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+    z-index: 0;
+    filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.6));
+}
+
+.image-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: inset 0 0 70px rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.image-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Ajusta la altura del difuminado */
+    --tw-bg-opacity: 1;
+    background: linear-gradient(to top, rgb(15 23 42/var(--tw-bg-opacity)), rgba(255, 255, 255, 0));
+    border-radius: 50%; /* Mantiene el borde redondo */
+    filter: blur(10px);
+    z-index: 2; /* Coloca el efecto por encima de la imagen */
+}
+
+#about-text{
+    margin: 20px 0;
+    text-align: center;
+}
+
+.skills {
+    --tw-bg-opacity: 1;
+    background: rgb(15 23 42/var(--tw-bg-opacity));
+}
+
+.main-content h2{
+    color: #c5d2ed;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sk-container {
+    padding: 1.5rem;
+    width: 100%;
+    margin: auto;
+    margin-top: 1rem;    
+}
+
+.sk-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+.sk-bar{
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 1rem;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.sk-bar:hover {
+    box-shadow: 0 4px 10px #c5d2ed;
+    transform: scale(1.03);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.info img{
+    width: 40px;
+    height: 40px;
+}
+
+.info span{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #c5d2ed;
+}
+
+.experience {
+    margin-top: 20px;
+}
+
+.xp-container {
+    margin-top: 20px;
+    display: flex;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.job-title{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.job-position{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.xp-container:hover{
+
+    background-color: #181f30;
+
+    .job-title {
+        --tw-text-opacity: 1;
+        color: rgb(94 234 212/var(--tw-text-opacity));
+    }
+
+    .job-position {
+        --tw-text-opacity: 1;
+        color: rgb(94 234 212/var(--tw-text-opacity));
+    }
+
+}
+
+.xp-date {
+    width: 20%;
+}
+
+.job-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin-left: 20px;
+}
+
+.job-description{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+.technologies {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    flex-wrap: wrap;
+}
+
+.job-skill {
+    list-style: none;
+    background-color: rgba(45, 212, 191, .1);;
+    border-radius: 20px;
+    padding: 5px 20px;
+    margin: 10px 10px 0 0;
+    --tw-text-opacity: 1;
+    color: rgb(94 234 212/var(--tw-text-opacity));
+}
+
+.job-box a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project {
+    background: #777a92;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+
+    html, body {
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .fixed-header {
+        width: 100%;
+        position: static;
+        height: auto;
+        padding: 40px
+    }
+
+    #nav-container {
+        flex-direction: row;
+    }
+
+    .nav-link{
+        margin-right: 40px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 0px 40px 40px 40px;
+        height: auto;
+        overflow-y:visible;
+    }
+
+    #about-text{
+        text-align:left;
+    }
+
+    .job-box {
+        margin-left: 80px;
+    }
+
+    .main-content h2{
+        text-align: left;
+    }
+}
+
+@media (max-width: 767px){
+
+    .fixed-header {
+        padding: 20px;
+    }
+
+    .main-content {
+        padding: 0px 20px 20px 20px;
+    }
+
+}
+
+@media (max-width: 639px) {
+
+    .sk-container {
+        padding: 0;   
+    }
+    
+    .xp-container {
+        flex-direction: column;
+    }
+
+    .xp-date {
+        width: 100%;
+    }
+
+    .job-box {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+}

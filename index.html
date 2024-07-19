@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./public/css/styles.css">
+    <script src="https://kit.fontawesome.com/bd91cb2d66.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="fixed-header">
+        <div class="profile">
+            <div class="min-device-title">
+                <h1>Daniel Faigenboim</h1>
+            </div>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>Transforming ideas into reality</p>
+            <nav>
+                <ul id="nav-container">
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link" onclick="seleccionar()">Skills</a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#certificates" class="nav-link">Certificates</a></li>
+                </ul>
+            </nav>
+            <div id="social">
+                <p><a href="https://www.linkedin.com/in/daniel-faigenboim-5a259521/" target="_blank"><i class="fa-brands fa-linkedin social-icon"></i></a></p>
+                <p><a href="https://github.com/danifai" target="_blank"><i class="fa fa-github social-icon"></i></a></p>
+                <p><i class="fa-solid fa-envelope social-icon"></i></p>
+            </div>
+        </div>
+    </header>
+    <main class="main-content">
+        <section id="about">
+            <div class="image-box">
+                <img src="./public/img/profile.jpg" class="profile-img" alt="Profile Picture">
+            </div>
+            <p id="about-text">Hello! Welcome to my portfolio. I started in this wonderful world of programming in 2022, and 
+                artificial intelligence in 2023, so, of course, I continue to learn and train every day. 
+                Before that year I dedicated myself to the field of civil engineering, which served as a great 
+                foundation in logic and mathematics. I am actively looking for job opportunities, so if you need a 
+                trainee or junior profile, or just want to say hi, do not hesitate to contact me!</p>
+        </section>
+        <section class="skills" id="skills">
+            <h2>Skills</h2>
+            <div class="sk-container">
+                <div class="sk-row" id="skillsContainer">
+                    <div class="sk-bar">
+                        <div class="info">
+                            <img src="./public/img/python.png" alt="Python Logo">
+                            <span>Python</span>
+                        </div>
+                    </div>
+                    <div class="sk-bar">
+                        <div class="info">
+                            <img src="./public/img/js-logo.webp" alt="Javascript Logo">
+                            <span>Javascript</span>
+                        </div>
+                    </div>
+                    <div class="sk-bar">
+                        <div class="info">
+                            <img src="./public/img/html-logo.png" alt="HTML Logo">
+                            <span>HTML</span>
+                        </div>
+                    </div>
+                    <div class="sk-bar">
+                        <div class="info">
+                            <img src="./public/img/css-logo.png" alt="CSS Logo">
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sk-row" id="skillsContainer">
+                    <div class="sk-bar">
+                        <div class="info">
+                            <img src="./public/img/mysql-logo.png" alt="MySQL Logo">
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                    <div class="sk-bar">
+                        <div class="info">
+                            <img src="./public/img/nodejs-logo.png" alt="NodeJs Logo">
+                            <span>NodeJs</span>
+                        </div>
+                    </div>
+                    <div class="sk-bar">
+                        <div class="info">
+                            <img src="./public/img/react-logo.png" alt="React Logo">
+                            <span>React</span>
+                        </div>
+                    </div>
+                    <div class="sk-bar">
+                        <div class="info">
+                            <img src="./public/img/github-logo.png" alt="Github Logo">
+                            <span>Github</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sk-row" id="skillsContainer">
+                    <div class="sk-bar">
+                        <div class="info">
+                            <img src="./public/img/autocad-logo.png" alt="Autocad Logo">
+                            <span>Autocad</span>
+                        </div>
+                    </div>
+                    <div class="sk-bar">
+                        <div class="info">
+                            <img src="./public/img/maya-logo.png" alt="Maya Logo">
+                            <span>Maya</span>
+                        </div>
+                    </div>
+                    <div class="sk-bar">
+                        <div class="info">
+                            <img src="./public/img/shotgun-logo.png" alt="Shotgrid Logo">
+                            <span>Shotgrid</span>
+                        </div>
+                    </div>
+                    <div class="sk-bar">
+                        <div class="info">
+                            <img src="./public/img/blender-logo.png" alt="Blender Logo">
+                            <span>Blender</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Añadir más proyectos aquí -->
+        </section>
+        <section class="experience" id="experience">
+            <h2>Experience</h2>
+            <div class="xp-container">
+                <div class="xp-date">
+                    <p>11/2022 - Present</p>
+                </div>
+                <div class="job-box">
+                    <h4 class="job-title">Many-Worlds Studio</h4>
+                    <h4 class="job-position">Python / VFX Pipeline Developer</h4>
+                    <p class="job-description">
+                        - Pipeline Integration and Development: Specialized in utilizing Python API for the creation and 
+                        maintenance of efficient, automated pipelines in VFX projects.
+                    </p>
+                    <p class="job-description">
+                        - Development, debugging and updating code for custom tools and plugins for Autodesk Maya and Blender, Python.
+                    </p>
+                    <p class="job-description">
+                        - Configuration and maintenance of Shotgun environment.
+                    </p>
+                    <p class="job-description">
+                        - Integration of design software with generative AI of texts and images.
+                    </p>
+                    <ul class="technologies">
+                        <li class="job-skill">Python</li>
+                        <li class="job-skill">Github</li>
+                        <li class="job-skill">Maya</li>
+                        <li class="job-skill">Shotgrid</li>
+                        <li class="job-skill">Blender</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="xp-container">
+                <div class="xp-date">
+                    <p>03/2022 - 11/22</p>
+                </div>
+                <div class="job-box">
+                    <h4 class="job-title">TecnoFan</h4>
+                    <h4 class="job-position">Fullstack Developer</h4>
+                    <p class="job-description">
+                        - Integrative project for the educational environment of Digital House.
+                    </p>
+                    <p class="job-description">
+                        - Development of ecommerce using agile methodologies and Git for version control.
+                    </p>
+                    <p class="job-description">
+                        - Backend: database interaction, MVC, CRUD, validations.
+                    </p>
+                    <p class="job-description">
+                        - Frontend: responsive views, styling, client-side interaction and validations.
+                    </p>
+                    <ul class="technologies">
+                        <li class="job-skill">JavaScript</li>
+                        <li class="job-skill">Node.js</li>
+                        <li class="job-skill">HTML</li>
+                        <li class="job-skill">CSS</li>
+                        <li class="job-skill">MySQL</li>
+                        <li class="job-skill">React.js</li>
+                        <li class="job-skill">Github</li>
+                        <li class="job-skill">Trello</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="education" id="education">
+            <h2>Education</h2>
+            <div class="xp-container">
+                <div class="xp-date">
+                    <p>03/2023 - Present</p>
+                </div>
+                <div class="job-box">
+                    <h4 class="job-title">Universidad Nacional de Hurlingham (UNAHUR)</h4>
+                    <h4 class="job-position">University Technician, Artificial Intelligence</h4>
+                    <p class="job-description">
+                        Design and development of artificial intelligence models, practical application of decision-making algorithms and 
+                        adaptation to new technologies. Areas of focus include data analytics, computer vision, natural language processing, 
+                        and machine learning. Emphasis on programming, open standards, and ethical considerations on the impact of AI 
+                        technology.Design and development of artificial intelligence models, practical application of decision-making algorithms 
+                        and adaptation to new technologies. Areas of focus include data analytics, computer vision, natural language processing, 
+                        and machine learning. Emphasis on programming, open standards, and ethical considerations on the impact of AI technology.
+                    </p>
+                    <ul class="technologies">
+                        <a href="https://unahur.edu.ar/wp-content/uploads/2023/04/Tecnicatura-en-Inteligencia-Artificial-1.pdf" target="_blank">
+                            <li class="job-skill">View the study program</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="xp-container">
+                <div class="xp-date">
+                    <p>03/2022 - Present</p>
+                </div>
+                <div class="job-box">
+                    <h4 class="job-title">Universidad Nacional de Hurlingham (UNAHUR)</h4>
+                    <h4 class="job-position">University Technician, Programming</h4>
+                    <p class="job-description">
+                        Programming with a focus on object-oriented design and software development. Practical experience in organizational 
+                        applications and adaptation skills to new technologies. Academic training in all phases of software development and 
+                        challenges in various professional environments.
+                    </p>
+                    <ul class="technologies">
+                        <a href="https://unahur.edu.ar/wp-content/uploads/2023/04/Tecnicatura-Universitaria-en-Programacion-1.pdf" target="_blank">
+                            <li class="job-skill">View the study program</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="xp-container">
+                <div class="xp-date">
+                    <p>02/2023 - 10/2023</p>
+                </div>
+                <div class="job-box">
+                    <h4 class="job-title">Universidad Nacional de San Luis (UNSL)</h4>
+                    <h4 class="job-position">Backend Python Developer</h4>
+                    <ul class="technologies">
+                        <li class="job-skill">Python</li>
+                        <li class="job-skill">POO</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="xp-container">
+                <div class="xp-date">
+                    <p>03/2022 - 09/2022</p>
+                </div>
+                <div class="job-box">
+                    <h4 class="job-title">Digital House</h4>
+                    <h4 class="job-position">Fullstack Web Developer</h4>
+                    <ul class="technologies">
+                        <li class="job-skill">JavaScript</li>
+                        <li class="job-skill">Node.js</li>
+                        <li class="job-skill">HTML</li>
+                        <li class="job-skill">CSS</li>
+                        <li class="job-skill">MySQL</li>
+                        <li class="job-skill">React.js</li>
+                        <li class="job-skill">Github</li>
+                        <li class="job-skill">Trello</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="xp-container">
+                <div class="xp-date">
+                    <p>03/2007 - 11/2015</p>
+                </div>
+                <div class="job-box">
+                    <h4 class="job-title">Universidad Tecnológica Nacional (UTN)</h4>
+                    <h4 class="job-position">Civil Engineering</h4>
+                    <p class="job-description">
+                        Completed up to 60% of this degree.
+                    </p>
+                </div>
+            </div>
+        </section>           
+        <section class="project-container" id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Descripción del proyecto.</p>
+            </div>
+            <!-- Añadir más proyectos aquí -->
+        </section>
+        <section class="certificates" id="certificates">
+            <h2>Certificates</h2>
+            <div class="project">
+                <h3>Certificate 1</h3>
+                <p>Descripción de la certificación</p>
+            </div>
+            <!-- Añadir más proyectos aquí -->
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Información de contacto.</p>
+        </section>
+    </main>
+    <div class="cursor"></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./public/js/index.js"></script>
+</body>
+</html>
