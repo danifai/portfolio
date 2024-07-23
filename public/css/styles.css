@@ -71,6 +71,19 @@ body p{
     height: 100%;
 }
 
+.name-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name-container i{
+    font-size: 30px;
+    display: none;
+}
+
+.name-container
+
 .typing-text {
     margin-top: 5px;
     min-width: 280px;
@@ -80,17 +93,17 @@ body p{
     white-space: nowrap;
 }
 
-.typing-text span {
+#span-profile {
     position: relative;
 }
 
-.typing-text span::before {
+#span-profile::before {
     content: "Full Stack Developer.";
     color: #c5d2ed;
     animation: words 20s infinite;
 }
 
-.typing-text span::after {
+#span-profile::after {
     content: "";
     position: absolute;
     width: calc(100% + 8px);
@@ -151,7 +164,7 @@ body p{
     padding: 0;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .nav-link {
@@ -180,15 +193,28 @@ body p{
     background-color: white;
 }
 
+/* .nav-link.active::before {
+    width: 60px;
+    background-color: white;
+} */
+
 .nav-link:hover {
     font-weight: bold;
     padding-left: 75px;
     color: white;
 }
 
+/* .nav-link.active {
+    font-weight: bold;
+    padding-left: 75px;
+    color: white;
+} */
+
 #social {
     display: flex;
     margin-top: auto;
+    justify-content: space-between;
+    width: 150px;
 }
 
 #social p{
@@ -202,8 +228,13 @@ body p{
 }
 
 .social-icon{
-    font-size: 25px;
-    margin-right: 20px;
+    font-size: 28px;
+    transition: transform .2s;
+}
+
+.social-icon:hover{
+    color: white;
+    transform: scale(1.3);
 }
 
 .main-content {
@@ -335,6 +366,10 @@ main h2 {
     margin-top: 20px;
 }
 
+/* .experience:hover{
+    opacity: 0.5;
+} */
+
 .xp-container {
     margin-top: 20px;
     display: flex;
@@ -346,7 +381,16 @@ main h2 {
     color: #ffffff;
     font-size: 18px;
     font-weight: 500;
+    display: flex;
+    align-items: center;
 }
+
+.job-title i {
+    font-size: 12px;
+    margin-left: 10px;
+    transition: margin 0.2s ease;
+}
+
 
 .job-position{
     color: #ffffff;
@@ -363,6 +407,11 @@ main h2 {
         color: rgb(94 234 212/var(--tw-text-opacity));
     }
 
+    .job-title i{
+        margin-left: 13px;
+        margin-bottom: 3px;
+    }
+
     .job-position {
         --tw-text-opacity: 1;
         color: rgb(94 234 212/var(--tw-text-opacity));
@@ -370,8 +419,69 @@ main h2 {
 
 }
 
+
 .xp-date {
     width: 20%;
+}
+
+#show-civil-xp {
+    display: block;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    color: #c5d2ed;
+    scroll-margin-top: 100px;
+    scroll-margin-bottom: 0;
+}
+
+.civil-eng-xp {
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    height: auto;
+    transition: max-height 0.5s ease-in-out;
+}
+
+
+#show-civil-xp:after {
+    content: ' ▼';
+}
+
+#show-civil-xp.active{
+    color: white;
+}
+
+#show-civil-xp.active:after {
+    content: ' ▲';
+    color: white;
+}
+
+.show {
+    display: block;
+    max-height: 1800px; 
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-img-box{
+    width: 20%;
+}
+
+.project-img-box img{
+    width: 100%;
+    padding: 1px;
+    background-color: #181f30;
+    border-radius: 5px;
+}
+
+.project-box:hover{
+
+    .project-img-box img {
+        background-color: #c5d2ed;
+    }
 }
 
 .job-box {
@@ -419,6 +529,93 @@ main h2 {
     margin-bottom: 20px;
 }
 
+.view-certificate:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption, #caption-2 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    font-size: 20px;
+}
+
+/* Add Animation */
+.modal-content, #caption, #caption-2 {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+  
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (min-width: 1292px){
+    .fixed-header{
+        padding-left: 10%;
+    }
+
+    .main-content{
+        padding-right: 10%;
+    }
+}
+
 @media (max-width: 1024px) {
 
     html, body {
@@ -433,12 +630,51 @@ main h2 {
         padding: 40px
     }
 
-    #nav-container {
-        flex-direction: row;
+    .name-container{
+        align-items: baseline;
     }
 
+    #menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    #nav-container {
+        margin-top: 0;
+        display: flex;
+        overflow: hidden;
+        max-height: 0;
+        height: auto;
+        transition: max-height 0.5s ease-in-out;
+    }
+
+    #nav-container.open{
+        padding: 0;
+        display: flex;
+        max-height: 1000px; 
+    }
+
+    .nav-row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-column{
+        display: flex;
+        flex-direction: column;
+    }
     .nav-link{
         margin-right: 40px;
+        padding-left: 0;
+    }
+
+    .nav-link::before {
+        display: none;
+    }
+
+    .nav-link:hover {
+        padding-left: 0;
+        font-weight: normal;
     }
 
     .main-content {
@@ -452,8 +688,24 @@ main h2 {
         text-align:left;
     }
 
+    .xp-container {
+        margin-top: 20px;
+        display: flex;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .xp-date{
+        width: 25%;
+    }
+
+    .project-img-box{
+        width: 25%;
+    }
+
     .job-box {
-        margin-left: 80px;
+        width: 75%;
+        margin-left: 20px;
     }
 
     .main-content h2{
@@ -471,9 +723,18 @@ main h2 {
         padding: 0px 20px 20px 20px;
     }
 
+    .modal-content {
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 639px) {
+
+
+    #menu-toggle {
+        font-size: 26px;
+    }
 
     .sk-container {
         padding: 0;   
@@ -487,9 +748,20 @@ main h2 {
         width: 100%;
     }
 
+    .project-img-box {
+        margin-top: 20px;
+        width: 40%;
+    }
+
     .job-box {
         margin-left: 0px;
         width: 100%;
+    }
+
+    .project-box{
+        display: flex;
+        flex-direction: column-reverse;
+
     }
 
 }

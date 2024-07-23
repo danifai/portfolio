@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Daniel Faigenboim</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./public/css/styles.css">
     <script src="https://kit.fontawesome.com/bd91cb2d66.js" crossorigin="anonymous"></script>
@@ -11,19 +11,26 @@
 <body>
     <header class="fixed-header">
         <div class="profile">
-            <div class="min-device-title">
+            <div class="name-container">
                 <h1>Daniel Faigenboim</h1>
+                <i class="fa-solid fa-bars" id="menu-toggle"></i>
             </div>
-            <h3 class="typing-text">I'm a <span></span></h3>
+            <h3 class="typing-text">I'm a <span id="span-profile"></span></h3>
             <p>Transforming ideas into reality</p>
             <nav>
                 <ul id="nav-container">
-                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#skills" class="nav-link" onclick="seleccionar()">Skills</a></li>
-                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
-                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
-                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                    <li class="nav-item"><a href="#certificates" class="nav-link">Certificates</a></li>
+                    <div class="nav-row">
+                        <div class="nav-column">
+                            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                            <li class="nav-item"><a href="#skills" class="nav-link" onclick="seleccionar()">Skills</a></li>
+                            <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                        </div>
+                        <div class="nav-column" id="nav-col-2">
+                            <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                            <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                            <li class="nav-item"><a href="#certificates" class="nav-link">Certificates</a></li>
+                        </div>
+                    </div>
                 </ul>
             </nav>
             <div id="social">
@@ -126,7 +133,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Añadir más proyectos aquí -->
         </section>
         <section class="experience" id="experience">
             <h2>Experience</h2>
@@ -159,9 +165,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="xp-container">
+            <div class="xp-container" id="last-it-xp">
                 <div class="xp-date">
-                    <p>03/2022 - 11/22</p>
+                    <p>03/2022 - 11/2022</p>
                 </div>
                 <div class="job-box">
                     <h4 class="job-title">TecnoFan</h4>
@@ -190,6 +196,131 @@
                     </ul>
                 </div>
             </div>
+            <div class="civil-eng-xp" id="civil-container">
+                <div class="xp-container">
+                    <div class="xp-date">
+                        <p>04/2022 - 10/2022</p>
+                    </div>
+                    <div class="job-box">
+                        <h4 class="job-title">Veka Argentina</h4>
+                        <h4 class="job-position">Technical Designer</h4>
+                        <p class="job-description">
+                            Technical assistance and training to manufacturers.
+                        </p>
+                        <ul class="technologies">
+                            <li class="job-skill">Autocad</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="xp-container">
+                    <div class="xp-date">
+                        <p>04/2021 - 04/2022</p>
+                    </div>
+                    <div class="job-box">
+                        <h4 class="job-title">Aberturas Rosch</h4>
+                        <h4 class="job-position">Technical Designer</h4>
+                        <p class="job-description">
+                            Customer service during construction process and after-sales.
+                        </p>
+                        <ul class="technologies">
+                            <li class="job-skill">Autocad</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="xp-container">
+                    <div class="xp-date">
+                        <p>04/2020 - 04/2021</p>
+                    </div>
+                    <div class="job-box">
+                        <h4 class="job-title">Geodata S.p.A.</h4>
+                        <h4 class="job-position">Position: Semi-Senior Civil Drafter</h4>
+                        <p class="job-description">
+                            Documentation for metal structures and reinforced concrete, topographic and road plans.
+                        </p>
+                        <ul class="technologies">
+                            <li class="job-skill">Autocad</li>
+                            <li class="job-skill">Civil 3D</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="xp-container">
+                    <div class="xp-date">
+                        <p>01/2019 - 01/2020</p>
+                    </div>
+                    <div class="job-box">
+                        <h4 class="job-title">Ministry of Transportation of the Nation</h4>
+                        <h4 class="job-position">Position: Semi-Senior Civil Drafter</h4>
+                        <p class="job-description">
+                            Documentation for metal structures and reinforced concrete, topographic and road plans.
+                        </p>
+                        <ul class="technologies">
+                            <li class="job-skill">Autocad</li>
+                            <li class="job-skill">Civil 3D</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="xp-container">
+                    <div class="xp-date">
+                        <p>08/2013 - 12/2018</p>
+                    </div>
+                    <div class="job-box">
+                        <h4 class="job-title">Geoconsult S.A.</h4>
+                        <h4 class="job-position">Position: Semi-Senior Civil Drafter</h4>
+                        <p class="job-description">
+                            Documentation for metal structures and reinforced concrete, topographic and road plans.
+                        </p>
+                        <ul class="technologies">
+                            <li class="job-skill">Autocad</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="xp-container">
+                    <div class="xp-date">
+                        <p>05/2011 - 08/2013</p>
+                    </div>
+                    <div class="job-box">
+                        <h4 class="job-title">CH2M HILL S.A.</h4>
+                        <h4 class="job-position">Position: Junior Civil Drafter</h4>
+                        <p class="job-description">
+                            Documentation for metal structures and reinforced concrete, topographic and road plans.
+                        </p>
+                        <ul class="technologies">
+                            <li class="job-skill">Autocad</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="xp-container">
+                    <div class="xp-date">
+                        <p>05/2010 - 05/2011</p>
+                    </div>
+                    <div class="job-box">
+                        <h4 class="job-title">Labor Corporativa S.A.</h4>
+                        <h4 class="job-position">Position: Junior Civil Drafter</h4>
+                        <p class="job-description">
+                            Documentation for metal structures and reinforced concrete, topographic and road plans.
+                        </p>
+                        <ul class="technologies">
+                            <li class="job-skill">Autocad</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="xp-container">
+                    <div class="xp-date">
+                        <p>04/2008 - 04/2010</p>
+                    </div>
+                    <div class="job-box">
+                        <h4 class="job-title">Mobiliarios Fontenla S.A.</h4>
+                        <h4 class="job-position">Position: CAD Drafter</h4>
+                        <p class="job-description">
+                            Drawing of technical plans in Autocad. Customer and technical support.
+                        </p>
+                        <ul class="technologies">
+                            <li class="job-skill">Autocad</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <h4 class="job-title" id="show-civil-xp">View Civil Engineering Experience</h4>
         </section>
         <section class="education" id="education">
             <h2>Education</h2>
@@ -281,19 +412,119 @@
         </section>           
         <section class="project-container" id="projects">
             <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Descripción del proyecto.</p>
-            </div>
-            <!-- Añadir más proyectos aquí -->
+            <a href="https://daniel-faigenboim-tecnofan.up.railway.app/" class="project-link" target="_blank">
+                <div class="xp-container project-box">
+                    <div class="project-img-box">
+                        <img src="./public/img/tecnofan.png" alt="Tecnofan Index">
+                    </div>
+                    <div class="job-box">
+                        <h4 class="job-title">TecnoFan - Ecommerce <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+                        <p class="job-description">
+                            Ecommerce project carried out during the fullstack web developer course. CRUD of users and products in operation.
+                        </p>
+                        <ul class="technologies">
+                            <li class="job-skill">JavaScript</li>
+                            <li class="job-skill">Node.js</li>
+                            <li class="job-skill">HTML</li>
+                            <li class="job-skill">CSS</li>
+                            <li class="job-skill">MySQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <a href="https://danifai.github.io/cv_online/" class="project-link" target="_blank">
+                <div class="xp-container project-box">
+                    <div class="project-img-box">
+                        <img src="./public/img/cv-template.png" alt="CV Template Index">
+                    </div>
+                    <div class="job-box">
+                        <h4 class="job-title">CV Online <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+                        <p class="job-description">
+                            CV template using Bootstrap.
+                        </p>
+                        <ul class="technologies">
+                            <li class="job-skill">JavaScript</li>
+                            <li class="job-skill">HTML</li>
+                            <li class="job-skill">CSS</li>
+                            <li class="job-skill">Bootstrap</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <a href="https://danifai.github.io/scouts_photo_album/" class="project-link" target="_blank">
+                <div class="xp-container project-box">
+                    <div class="project-img-box">
+                        <img src="./public/img/unascouts.png" alt="Photo Album Index">
+                    </div>
+                    <div class="job-box">
+                        <h4 class="job-title">Scouts photo album <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+                        <p class="job-description">
+                            Responsive scouts page and photo album, frontend only, made for a university subject. User: "Eugenia", password: "123" for the 
+                            administrator view. User: "everyone", password: "456" for the album view.
+                        </p>
+                        <ul class="technologies">
+                            <li class="job-skill">JavaScript</li>
+                            <li class="job-skill">HTML</li>
+                            <li class="job-skill">CSS</li>
+                            <li class="job-skill">Bootstrap</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/danifai/sistema_administrativo" class="project-link" target="_blank">
+                <div class="xp-container project-box">
+                    <div class="project-img-box">
+                        <img src="./public/img/adm_system.png" alt="Photo Album Index">
+                    </div>
+                    <div class="job-box">
+                        <h4 class="job-title">Administrative system <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+                        <p class="job-description">
+                            Responsive scouts page and photo album, frontend only, made for a university subject. User: "Eugenia", password: "123" for the 
+                            administrator view. User: "everyone", password: "456" for the album view.
+                        </p>
+                        <ul class="technologies">
+                            <li class="job-skill">Python</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
         </section>
         <section class="certificates" id="certificates">
             <h2>Certificates</h2>
-            <div class="project">
-                <h3>Certificate 1</h3>
-                <p>Descripción de la certificación</p>
+            <div class="xp-container">
+                <div class="xp-date">
+                    <p>10/2023</p>
+                </div>
+                <div class="job-box">
+                    <h4 class="job-title">Universidad Nacional de San Luis</h4>
+                    <h4 class="job-position">Python Developer</h4>
+                    <ul class="technologies">
+                        <li class="job-skill view-certificate" id="view-certificate">View certificate</li>
+                        <div id="myModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img src="./public/img/python-certificate.png" alt="Python Developer Certificate" class="modal-content" id="python-img">
+                            <div id="caption"></div>
+                        </div>
+                    </ul>
+                </div>
             </div>
-            <!-- Añadir más proyectos aquí -->
+            <div class="xp-container">
+                <div class="xp-date">
+                    <p>09/2022</p>
+                </div>
+                <div class="job-box">
+                    <h4 class="job-title">Digital House</h4>
+                    <h4 class="job-position">Fullstack Web Developer</h4>
+                    <ul class="technologies">
+                        <li class="job-skill view-certificate" id="view-certificate-2">View certificate</li>
+                        <div id="myModal-2" class="modal">
+                            <span class="close" id="fullstack-close">&times;</span>
+                            <img src="./public/img/fullstack-certificate.png" alt="Fullstack Web Developer Certificate" class="modal-content" id="fullstack-img">
+                            <div id="caption-2"></div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
         </section>
         <section id="contact">
             <h2>Contact</h2>
