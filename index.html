@@ -12,7 +12,9 @@
     <header class="fixed-header">
         <div class="profile">
             <div class="name-container">
-                <h1>Daniel Faigenboim</h1>
+                <a href="index.html">
+                    <h1>Daniel Faigenboim</h1>
+                </a>
                 <i class="fa-solid fa-bars" id="menu-toggle"></i>
             </div>
             <h3 class="typing-text">I'm a <span id="span-profile"></span></h3>
@@ -36,11 +38,13 @@
             <div id="social">
                 <p><a href="https://www.linkedin.com/in/daniel-faigenboim-5a259521/" target="_blank"><i class="fa-brands fa-linkedin social-icon"></i></a></p>
                 <p><a href="https://github.com/danifai" target="_blank"><i class="fa fa-github social-icon"></i></a></p>
-                <p><i class="fa-solid fa-envelope social-icon"></i></p>
+                <p><a><i class="fa-brands fa-whatsapp social-icon" id="whatsapp-btn"></i></a></p>
+                <p><a href="#contact"><i class="fa-solid fa-envelope social-icon"></i></a></p>
             </div>
         </div>
     </header>
     <main class="main-content">
+        <button id="scrollToTopBtn"><i class="fa-solid fa-arrow-up"></i></button>
         <section id="about">
             <div class="image-box">
                 <img src="./public/img/profile.jpg" class="profile-img" alt="Profile Picture">
@@ -51,8 +55,14 @@
                 foundation in logic and mathematics. I am actively looking for job opportunities, so if you need a 
                 trainee or junior profile, or just want to say hi, do not hesitate to contact me!</p>
         </section>
+        <section class="download-cv" id="download-cv">
+            <ul class="technologies cv-ul">
+                <a href="CV_Daniel_Faigenboim.pdf" class="cv-btn" target="_blank"><li class="job-skill cv-li">Download Spanish CV</li></a>
+                <a href="CV_Daniel_Faigenboim_EN.pdf" class="cv-btn" target="_blank"><li class="job-skill cv-li">Download English CV</li></a>
+            </ul>
+        </section>
         <section class="skills" id="skills">
-            <h2>Skills</h2>
+            <h2 class="section-title">Skills</h2>
             <div class="sk-container">
                 <div class="sk-row" id="skillsContainer">
                     <div class="sk-bar">
@@ -134,9 +144,9 @@
                 </div>
             </div>
         </section>
-        <section class="experience" id="experience">
-            <h2>Experience</h2>
-            <div class="xp-container">
+        <section class="section-box" id="experience">
+            <h2 class="section-title">Experience</h2>
+            <article class="xp-container">
                 <div class="xp-date">
                     <p>11/2022 - Present</p>
                 </div>
@@ -164,8 +174,8 @@
                         <li class="job-skill">Blender</li>
                     </ul>
                 </div>
-            </div>
-            <div class="xp-container" id="last-it-xp">
+            </article>
+            <article class="xp-container" id="last-it-xp">
                 <div class="xp-date">
                     <p>03/2022 - 11/2022</p>
                 </div>
@@ -195,9 +205,9 @@
                         <li class="job-skill">Trello</li>
                     </ul>
                 </div>
-            </div>
+            </article>
             <div class="civil-eng-xp" id="civil-container">
-                <div class="xp-container">
+                <article class="xp-container">
                     <div class="xp-date">
                         <p>04/2022 - 10/2022</p>
                     </div>
@@ -211,8 +221,8 @@
                             <li class="job-skill">Autocad</li>
                         </ul>
                     </div>
-                </div>
-                <div class="xp-container">
+                </article>
+                <article class="xp-container">
                     <div class="xp-date">
                         <p>04/2021 - 04/2022</p>
                     </div>
@@ -226,8 +236,8 @@
                             <li class="job-skill">Autocad</li>
                         </ul>
                     </div>
-                </div>
-                <div class="xp-container">
+                </article>
+                <article class="xp-container">
                     <div class="xp-date">
                         <p>04/2020 - 04/2021</p>
                     </div>
@@ -242,8 +252,8 @@
                             <li class="job-skill">Civil 3D</li>
                         </ul>
                     </div>
-                </div>
-                <div class="xp-container">
+                </article>
+                <article class="xp-container">
                     <div class="xp-date">
                         <p>01/2019 - 01/2020</p>
                     </div>
@@ -258,8 +268,8 @@
                             <li class="job-skill">Civil 3D</li>
                         </ul>
                     </div>
-                </div>
-                <div class="xp-container">
+                </article>
+                <article class="xp-container">
                     <div class="xp-date">
                         <p>08/2013 - 12/2018</p>
                     </div>
@@ -273,8 +283,8 @@
                             <li class="job-skill">Autocad</li>
                         </ul>
                     </div>
-                </div>
-                <div class="xp-container">
+                </article>
+                <article class="xp-container">
                     <div class="xp-date">
                         <p>05/2011 - 08/2013</p>
                     </div>
@@ -288,8 +298,8 @@
                             <li class="job-skill">Autocad</li>
                         </ul>
                     </div>
-                </div>
-                <div class="xp-container">
+                </article>
+                <article class="xp-container">
                     <div class="xp-date">
                         <p>05/2010 - 05/2011</p>
                     </div>
@@ -303,8 +313,8 @@
                             <li class="job-skill">Autocad</li>
                         </ul>
                     </div>
-                </div>
-                <div class="xp-container">
+                </article>
+                <article class="xp-container">
                     <div class="xp-date">
                         <p>04/2008 - 04/2010</p>
                     </div>
@@ -318,54 +328,60 @@
                             <li class="job-skill">Autocad</li>
                         </ul>
                     </div>
-                </div>
+                </article>
             </div>
             <h4 class="job-title" id="show-civil-xp">View Civil Engineering Experience</h4>
         </section>
-        <section class="education" id="education">
-            <h2>Education</h2>
-            <div class="xp-container">
+        <section class="section-box" id="education">
+            <h2 class="section-title">Education</h2>
+            <article class="xp-container">
                 <div class="xp-date">
                     <p>03/2023 - Present</p>
                 </div>
                 <div class="job-box">
                     <h4 class="job-title">Universidad Nacional de Hurlingham (UNAHUR)</h4>
                     <h4 class="job-position">University Technician, Artificial Intelligence</h4>
-                    <p class="job-description">
-                        Design and development of artificial intelligence models, practical application of decision-making algorithms and 
-                        adaptation to new technologies. Areas of focus include data analytics, computer vision, natural language processing, 
-                        and machine learning. Emphasis on programming, open standards, and ethical considerations on the impact of AI 
-                        technology.Design and development of artificial intelligence models, practical application of decision-making algorithms 
-                        and adaptation to new technologies. Areas of focus include data analytics, computer vision, natural language processing, 
-                        and machine learning. Emphasis on programming, open standards, and ethical considerations on the impact of AI technology.
-                    </p>
+                    <div class="text-section">
+                        <p class="job-description education-text">
+                            Design and development of artificial intelligence models, practical application of decision-making algorithms and 
+                            adaptation to new technologies. Areas of focus include data analytics, computer vision, natural language processing, 
+                            and machine learning. Emphasis on programming, open standards, and ethical considerations on the impact of AI 
+                            technology.Design and development of artificial intelligence models, practical application of decision-making algorithms 
+                            and adaptation to new technologies. Areas of focus include data analytics, computer vision, natural language processing, 
+                            and machine learning. Emphasis on programming, open standards, and ethical considerations on the impact of AI technology.
+                        </p>
+                        <span class="toggle-span">...view more</span>
+                    </div>
                     <ul class="technologies">
                         <a href="https://unahur.edu.ar/wp-content/uploads/2023/04/Tecnicatura-en-Inteligencia-Artificial-1.pdf" target="_blank">
                             <li class="job-skill">View the study program</li>
                         </a>
                     </ul>
                 </div>
-            </div>
-            <div class="xp-container">
+            </article>
+            <article class="xp-container">
                 <div class="xp-date">
                     <p>03/2022 - Present</p>
                 </div>
                 <div class="job-box">
                     <h4 class="job-title">Universidad Nacional de Hurlingham (UNAHUR)</h4>
                     <h4 class="job-position">University Technician, Programming</h4>
-                    <p class="job-description">
-                        Programming with a focus on object-oriented design and software development. Practical experience in organizational 
-                        applications and adaptation skills to new technologies. Academic training in all phases of software development and 
-                        challenges in various professional environments.
-                    </p>
+                    <div class="text-section">
+                        <p class="job-description education-text">
+                            Programming with a focus on object-oriented design and software development. Practical experience in organizational 
+                            applications and adaptation skills to new technologies. Academic training in all phases of software development and 
+                            challenges in various professional environments.
+                        </p>
+                        <span class="toggle-span">...view more</span>
+                    </div>
                     <ul class="technologies">
                         <a href="https://unahur.edu.ar/wp-content/uploads/2023/04/Tecnicatura-Universitaria-en-Programacion-1.pdf" target="_blank">
                             <li class="job-skill">View the study program</li>
                         </a>
                     </ul>
                 </div>
-            </div>
-            <div class="xp-container">
+            </article>
+            <article class="xp-container">
                 <div class="xp-date">
                     <p>02/2023 - 10/2023</p>
                 </div>
@@ -377,8 +393,8 @@
                         <li class="job-skill">POO</li>
                     </ul>
                 </div>
-            </div>
-            <div class="xp-container">
+            </article>
+            <article class="xp-container">
                 <div class="xp-date">
                     <p>03/2022 - 09/2022</p>
                 </div>
@@ -396,8 +412,8 @@
                         <li class="job-skill">Trello</li>
                     </ul>
                 </div>
-            </div>
-            <div class="xp-container">
+            </article>
+            <article class="xp-container">
                 <div class="xp-date">
                     <p>03/2007 - 11/2015</p>
                 </div>
@@ -408,12 +424,12 @@
                         Completed up to 60% of this degree.
                     </p>
                 </div>
-            </div>
+            </article>
         </section>           
-        <section class="project-container" id="projects">
-            <h2>Projects</h2>
+        <section class="section-box" id="projects">
+            <h2 class="section-title">Projects</h2>
             <a href="https://daniel-faigenboim-tecnofan.up.railway.app/" class="project-link" target="_blank">
-                <div class="xp-container project-box">
+                <article class="xp-container project-box">
                     <div class="project-img-box">
                         <img src="./public/img/tecnofan.png" alt="Tecnofan Index">
                     </div>
@@ -430,10 +446,10 @@
                             <li class="job-skill">MySQL</li>
                         </ul>
                     </div>
-                </div>
+                </article>
             </a>
             <a href="https://danifai.github.io/cv_online/" class="project-link" target="_blank">
-                <div class="xp-container project-box">
+                <article class="xp-container project-box">
                     <div class="project-img-box">
                         <img src="./public/img/cv-template.png" alt="CV Template Index">
                     </div>
@@ -449,10 +465,10 @@
                             <li class="job-skill">Bootstrap</li>
                         </ul>
                     </div>
-                </div>
+                </article>
             </a>
             <a href="https://danifai.github.io/scouts_photo_album/" class="project-link" target="_blank">
-                <div class="xp-container project-box">
+                <article class="xp-container project-box">
                     <div class="project-img-box">
                         <img src="./public/img/unascouts.png" alt="Photo Album Index">
                     </div>
@@ -469,29 +485,28 @@
                             <li class="job-skill">Bootstrap</li>
                         </ul>
                     </div>
-                </div>
+                </article>
             </a>
             <a href="https://github.com/danifai/sistema_administrativo" class="project-link" target="_blank">
-                <div class="xp-container project-box">
+                <article class="xp-container project-box">
                     <div class="project-img-box">
                         <img src="./public/img/adm_system.png" alt="Photo Album Index">
                     </div>
                     <div class="job-box">
                         <h4 class="job-title">Administrative system <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
                         <p class="job-description">
-                            Responsive scouts page and photo album, frontend only, made for a university subject. User: "Eugenia", password: "123" for the 
-                            administrator view. User: "everyone", password: "456" for the album view.
+                            Administrative School system made for academic Python proyect.
                         </p>
                         <ul class="technologies">
                             <li class="job-skill">Python</li>
                         </ul>
                     </div>
-                </div>
+                </article>
             </a>
         </section>
-        <section class="certificates" id="certificates">
-            <h2>Certificates</h2>
-            <div class="xp-container">
+        <section class="section-box" id="certificates">
+            <h2 class="section-title">Certificates</h2>
+            <article class="xp-container">
                 <div class="xp-date">
                     <p>10/2023</p>
                 </div>
@@ -507,8 +522,8 @@
                         </div>
                     </ul>
                 </div>
-            </div>
-            <div class="xp-container">
+            </article>
+            <article class="xp-container">
                 <div class="xp-date">
                     <p>09/2022</p>
                 </div>
@@ -524,11 +539,43 @@
                         </div>
                     </ul>
                 </div>
-            </div>
+            </article>
         </section>
-        <section id="contact">
+        <!-- <section id="contact">
             <h2>Contact</h2>
-            <p>Información de contacto.</p>
+            <div class="contact-box">
+                <div class="contact-item">
+                    <p>Email: <span id="email">daniel.fai89@gmail.com</span> <button class="copy-btn job-skill" data-copytarget="#email"><i class="fa-regular fa-copy"></i></button></p>
+                </div>
+                <div class="contact-item">
+                    <p>Phone: <span id="phone">+5491158056091</span> <button class="copy-btn job-skill" data-copytarget="#phone"><i class="fa-regular fa-copy"></i></button></p>
+                </div>
+            </div>
+        </section> -->
+        <section class="contact" id="contact">
+            <h2 class="section-title">Contact</h2>
+            <article class="xp-container">
+                <div class="xp-date">
+                    <p>Email</p>
+                </div>
+                <div class="job-box">
+                    <h4 class="job-title"><span id="email">daniel.fai89@gmail.com</span></h4>
+                    <ul class="technologies">
+                        <li class="job-skill view-certificate" id="view-certificate-2"><button class="copy-btn" data-copytarget="#email">Copy Email</button></li>
+                    </ul>
+                </div>
+            </article>
+            <article class="xp-container">
+                <div class="xp-date">
+                    <p>Phone</p>
+                </div>
+                <div class="job-box">
+                    <h4 class="job-title"><span id="phone">+5491158056091</span></h4>
+                    <ul class="technologies">
+                        <li class="job-skill view-certificate" id="view-certificate-2"><button class="copy-btn" data-copytarget="#phone">Copy Phone</button></li>
+                    </ul>
+                </div>
+            </article>
         </section>
     </main>
     <div class="cursor"></div>

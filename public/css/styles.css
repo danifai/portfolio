@@ -1,12 +1,114 @@
 /* styles.css */
 @font-face{
     font-family: "Louis-George";
-    src:url('fuentes/louis_george_cafe/Louis\ George\ Cafe.ttf'),
-    url('fuentes/louis_george_cafe/Louis\ George\ Cafe\ Bold.ttf'),
-    url('fuentes/louis_george_cafe/Louis\ George\ Cafe\ Bold\ Italic.ttf'),
-    url('fuentes/louis_george_cafe/Louis\ George\ Cafe\ Light.ttf'),
-    url('fuentes/louis_george_cafe/Louis\ George\ Cafe\ Light\ Italic.ttf'),
-    url('fuentes/louis_george_cafe/Louis\ George\ Cafe\ Italic.ttf');
+    src:url('fonts/louis_george_cafe/Louis\ George\ Cafe.ttf'),
+    url('fonts/louis_george_cafe/Louis\ George\ Cafe\ Bold.ttf'),
+    url('fonts/louis_george_cafe/Louis\ George\ Cafe\ Bold\ Italic.ttf'),
+    url('fonts/louis_george_cafe/Louis\ George\ Cafe\ Light.ttf'),
+    url('fonts/louis_george_cafe/Louis\ George\ Cafe\ Light\ Italic.ttf'),
+    url('fonts/louis_george_cafe/Louis\ George\ Cafe\ Italic.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Superior";
+    src:url('fonts/lt_superior/LTSuperior-Black.otf'),
+    url('fonts/lt_superior/LTSuperior-Bold.otf'),
+    url('fonts/lt_superior/LTSuperior-ExtraBold.otf'),
+    url('fonts/lt_superior/LTSuperior-ExtraLight.otf'),
+    url('fonts/lt_superior/LTSuperior-Light.otf'),
+    url('fonts/lt_superior/LTSuperior-Medium.otf'),
+    url('fonts/lt_superior/LTSuperior-Regular.otf'),
+    url('fonts/lt_superior/LTSuperior-SemiBold.otf'),
+    url('fonts/lt_superior/LTSuperior-Thin.otf'),
+    url('fonts/lt_superior/OFL.txt');
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: 'Analogue';
+    src:url('fonts/analogue/PostScript/AnalogueRed-35Thin.otf'),
+    url('fonts/analogue/PostScript/AnalogueRed-36ThinOblique.otf'),
+    url('fonts/analogue/PostScript/AnalogueRed-45Light.otf'),
+    url('fonts/analogue/PostScript/AnalogueRed-46LightOblique.otf'),
+    url('fonts/analogue/PostScript/AnalogueRed-55Regular.otf'),
+    url('fonts/analogue/PostScript/AnalogueRed-56Oblique.otf'),
+    url('fonts/analogue/PostScript/AnalogueRed-66MediumOblique.otf'),
+    url('fonts/analogue/PostScript/AnalogueRed-75Bold.otf'),
+    url('fonts/analogue/PostScript/AnalogueRed-76BoldOblique.otf'),
+    url('fonts/analogue/PostScript/AnalogueRed-85Black.otf'),
+    url('fonts/analogue/PostScript/AnalogueRed-86BlackOblique.otf')
+    url('fonts/analogue/TrueType/AnalogueRed-35Thin.ttf'),
+    url('fonts/analogue/TrueType/AnalogueRed-36ThinOblique.ttf'),
+    url('fonts/analogue/TrueType/AnalogueRed-45Light.ttf'),
+    url('fonts/analogue/TrueType/AnalogueRed-46LightOblique.ttf'),
+    url('fonts/analogue/TrueType/AnalogueRed-55Regular.ttf'),
+    url('fonts/analogue/TrueType/AnalogueRed-56Oblique.ttf'),
+    url('fonts/analogue/TrueType/AnalogueRed-65Medium.ttf'),
+    url('fonts/analogue/TrueType/AnalogueRed-66MediumOblique.ttf'),
+    url('fonts/analogue/TrueType/AnalogueRed-75Bold.ttf'),
+    url('fonts/analogue/TrueType/AnalogueRed-76BoldOblique.ttf'),
+    url('fonts/analogue/TrueType/AnalogueRed-85Black.ttf')
+    url('fonts/analogue/TrueType/AnalogueRed-86BlackOblique.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Balance';
+    src: url('fonts/balance_groovy/Balance\ Groovy\ -\ Groovy.ttf'),
+    url('fonts/balance_groovy/Balance\ Groovy\ -\ Sans.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Express";
+    src: url('fonts/expressway/expressway\ rg.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Evolve";
+    src: url('fonts/made_evolve_sans/MADE\ Evolve\ Sans\ Bold\ \(PERSONAL\ USE\).otf'),
+    url('fonts/made_evolve_sans/MADE\ Evolve\ Sans\ Bold\ EVO\ \(PERSONAL\ USE\).otf'),
+    url('fonts/made_evolve_sans/MADE\ Evolve\ Sans\ Light\ \(PERSONAL\ USE\).otf'),
+    url('fonts/made_evolve_sans/MADE\ Evolve\ Sans\ Light\ EVO\ \(PERSONAL\ USE\).otf'),
+    url('fonts/made_evolve_sans/MADE\ Evolve\ Sans\ Medium\ \(PERSONAL\ USE\).otf'),
+    url('fonts/made_evolve_sans/MADE\ Evolve\ Sans\ Medium\ EVO\ \(PERSONAL\ USE\).otf'),
+    url('fonts/made_evolve_sans/MADE\ Evolve\ Sans\ Regular\ \(PERSONAL\ USE\).otf'),
+    url('fonts/made_evolve_sans/MADE\ Evolve\ Sans\ Regular\ EVO\ \(PERSONAL\ USE\).otf'),
+    url('fonts/made_evolve_sans/MADE\ Evolve\ Sans\ Thin\ \(PERSONAL\ USE\).otf'),
+    url('fonts/made_evolve_sans/MADE\ Evolve\ Sans\ Thin\ EVO\ \(PERSONAL\ USE\).otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Infinity";
+    src: url('fonts/made_infinity/MADEINFINITYBesidePersonalUse-Black.otf'),
+    url('fonts/made_infinity/MADEINFINITYBesidePersonalUse-Medium.otf'),
+    url('fonts/made_infinity/MADEINFINITYOutlinePersonalUse-Black.otf'),
+    url('fonts/made_infinity/MADEINFINITYOutlinePersonalUse-Light.otf'),
+    url('fonts/made_infinity/MADEINFINITYOutlinePersonalUse-Medium.otf'),
+    url('fonts/made_infinity/MADEINFINITYOutlinePersonalUse-Regular.otf'),
+    url('fonts/made_infinity/MADEINFINITYOutlinePersonalUse-Thin.otf'),
+    url('fonts/made_infinity/MADEINFINITYPersonalUse-Black.otf'),
+    url('fonts/made_infinity/MADEINFINITYPersonalUse-Light.otf'),
+    url('fonts/made_infinity/MADEINFINITYPersonalUse-Medium.otf'),
+    url('fonts/made_infinity/MADEINFINITYPersonalUse-Regular.otf'),
+    url('fonts/made_infinity/MADEINFINITYPersonalUse-Thin.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Grotesk";
+    src: url('fonts/typo_grotesk/Typo\ Grotesk\ Black\ Demo.otf'),
+    url('fonts/typo_grotesk/Typo\ Grotesk\ Black\ Italic\ Demo.otf'),
+    url('fonts/typo_grotesk/Typo\ Grotesk\ Bold\ Demo.otf'),
+    url('fonts/typo_grotesk/Typo\ Grotesk\ Bold\ Italic\ Demo.otf'),
+    url('fonts/typo_grotesk/Typo\ Grotesk\ Demo.otf'),
+    url('fonts/typo_grotesk/Typo\ Grotesk\ Italic\ Demo.otf'),
+    url('fonts/typo_grotesk/Typo\ Grotesk\ Thin\ Demo.otf'),
+    url('fonts/typo_grotesk/Typo\ Grotesk\ Thin\ Italic\ Demo.otf'),
+    url('fonts/typo_grotesk/typogrotesk_testscreen.url');
     font-weight: normal;
 }
 
@@ -18,7 +120,7 @@
 body{
     height: 100%;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Evolve, Arial, sans-serif;
     --tw-bg-opacity: 1;
     background-color: rgb(15 23 42/var(--tw-bg-opacity));
 }
@@ -77,12 +179,17 @@ body p{
     align-items: center;
 }
 
+.name-container a{
+    text-decoration: none;
+    color: inherit;
+}
+
 .name-container i{
     font-size: 30px;
     display: none;
 }
 
-.name-container
+/* .name-container */
 
 .typing-text {
     margin-top: 5px;
@@ -91,6 +198,7 @@ body p{
     position: relative;
     overflow: hidden;
     white-space: nowrap;
+    font-size: 25px;
 }
 
 #span-profile {
@@ -214,7 +322,7 @@ body p{
     display: flex;
     margin-top: auto;
     justify-content: space-between;
-    width: 150px;
+    width: 200px;
 }
 
 #social p{
@@ -237,6 +345,10 @@ body p{
     transform: scale(1.3);
 }
 
+#whatsapp-btn {
+    cursor: pointer;
+}
+
 .main-content {
     margin-left: 50%;
     padding: 80px 80px 80px 0;
@@ -244,9 +356,9 @@ body p{
     overflow-y: auto;
 }
 
-main h2 {
+/* main h2 {
     margin-top: 40px;
-}
+} */
 
 #about {
     display: flex;
@@ -305,22 +417,49 @@ main h2 {
     text-align: center;
 }
 
+.download-cv{
+    margin-bottom: 60px;
+}
+
+.cv-ul {
+    justify-content: space-evenly;
+}
+
+.cv-li {
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+    transition: transform .2s;
+}
+
+.cv-li:hover{
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.cv-btn {
+    text-decoration: none;
+    color: inherit;
+    width: 45%;
+}
+
 .skills {
     --tw-bg-opacity: 1;
     background: rgb(15 23 42/var(--tw-bg-opacity));
 }
 
-.main-content h2{
+.section-title {
     color: #c5d2ed;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 50px;
+    font-size: 28px;
 }
 
 .sk-container {
     padding: 1.5rem;
     width: 100%;
     margin: auto;
-    margin-top: 1rem;    
+    margin-top: 0.5rem;    
 }
 
 .sk-row {
@@ -362,7 +501,7 @@ main h2 {
     color: #c5d2ed;
 }
 
-.experience {
+.section-box {
     margin-top: 20px;
 }
 
@@ -442,6 +581,11 @@ main h2 {
     transition: max-height 0.5s ease-in-out;
 }
 
+#show-civil-xp{
+    margin: 30px 0;
+    padding: 20px;
+    border-radius: 10px;
+}
 
 #show-civil-xp:after {
     content: ' ▼';
@@ -454,6 +598,12 @@ main h2 {
 #show-civil-xp.active:after {
     content: ' ▲';
     color: white;
+}
+
+#show-civil-xp:hover {
+    --tw-text-opacity: 1;
+    color: rgb(94 234 212/var(--tw-text-opacity));
+    background-color: #181f30;
 }
 
 .show {
@@ -523,6 +673,33 @@ main h2 {
     color: inherit;
 }
 
+.text-section{
+    position: relative;
+}
+
+.education-text {
+    max-height: 20px; /* Mostrar solo una parte del texto inicialmente */
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    display: inline-block;
+}
+
+.text-section.expanded .education-text {
+    max-height: 1000px; /* Un valor suficientemente grande para mostrar todo el texto */
+}
+
+.toggle-span {
+    --tw-text-opacity: 1;
+    color: rgb(94 234 212/var(--tw-text-opacity));
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.toggle-span:hover {
+    opacity: 0.7;
+}
+
 .project {
     background: #777a92;
     padding: 20px;
@@ -588,6 +765,17 @@ main h2 {
     to {transform:scale(1)}
 }
 
+/* Add closing Animation */
+@-webkit-keyframes zoom-out {
+    from {transform:scale(1)} 
+    to {transform:scale(0)}
+}
+
+@keyframes zoom-out {
+    from {transform:scale(1)} 
+    to {transform:scale(0)}
+}
+
 /* The Close Button */
 .close {
     position: absolute;
@@ -604,6 +792,28 @@ main h2 {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+.contact-item{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-item p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 320px;
+}
+
+.contact-item p button {
+    margin-top: 0;
+}
+
+.copy-btn{
+    border: none;
+    background: none;
+    color: inherit
 }
 
 @media (min-width: 1292px){
@@ -684,8 +894,36 @@ main h2 {
         overflow-y:visible;
     }
 
+    /* Scroll to Top Button Styles */
+    #scrollToTopBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none; /* Hidden by default */
+        z-index: 1000; /* Ensure it is above other elements */
+        background-color: rgba(45, 212, 191, .1);;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        padding: 5px 15px;
+        cursor: pointer;
+        font-size: 18px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        transition: opacity 0.3s;
+    }
+
+    #scrollToTopBtn:hover {
+        background-color: #555;
+    }
+
     #about-text{
         text-align:left;
+    }
+
+    .section-title {
+        text-align: start;
+        margin-left: 10px;
+        font-size: 24px;
     }
 
     .xp-container {
@@ -762,6 +1000,15 @@ main h2 {
         display: flex;
         flex-direction: column-reverse;
 
+    }
+
+    .download-cv .technologies {
+        flex-direction: column;
+    }
+
+    .cv-btn {
+        width: 100%;
+        margin-bottom: 20px;
     }
 
 }

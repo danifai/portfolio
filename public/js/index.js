@@ -47,30 +47,102 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    viewCertificate.onclick = function(){
+    // Function to open modal
+    function openModal(modal, captionText, img) {
         modal.style.display = "block";
         captionText.innerHTML = img.alt;
+        modal.querySelector('.modal-content').style.animationName = 'zoom';
     }
 
-    span.onclick = function() { 
-        modal.style.display = "none";
+    // Function to close modal
+    function closeModal(modal) {
+        const modalContent = modal.querySelector('.modal-content');
+        modalContent.style.animationName = 'zoom-out';
+        setTimeout(() => {
+            modal.style.display = "none";
+            modalContent.style.animationName = 'zoom';
+        }, 600); // Match the duration of the closing animation
     }
 
-    viewCertificate2.onclick = function(){
-        modal2.style.display = "block";
-        captionText2.innerHTML = fullstackImg.alt;
+    viewCertificate.onclick = function() {
+        openModal(modal, captionText, img);
+    }
+
+    span.onclick = function() {
+        closeModal(modal);
+    }
+
+    viewCertificate2.onclick = function() {
+        openModal(modal2, captionText2, fullstackImg);
     }
 
     spanFullstack.onclick = function() {
-        modal2.style.display = "none";
+        closeModal(modal2);
     }
 
     window.onclick = function(event) {
         if (event.target == modal) {
-            modal.style.display = "none";
+            closeModal(modal);
         } else if (event.target == modal2) {
-            modal2.style.display = "none";
+            closeModal(modal2);
         }
     }
+
+    document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('copy-btn')) {
+            const copyTarget = event.target.getAttribute('data-copytarget');
+            const copyText = document.querySelector(copyTarget).textContent;
+            const textArea = document.createElement('textarea');
+            textArea.value = copyText;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            alert('Copied to clipboard: ' + copyText);
+        }
+    });
+
+    document.addEventListener('click', function(event){
+        if (event.target.id === 'whatsapp-btn') {
+            const phoneNumber = "+5491158056091"; // Reemplaza con tu número de teléfono
+            const message = "Hello, I would like to contact you.";
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+    });
+
+    const toggleSpans = document.querySelectorAll('.toggle-span');
+    const longTexts = document.querySelectorAll('.education-text');
+
+    toggleSpans.forEach((toggleSpan, index) => {
+        const longText = longTexts[index];
+        toggleSpan.addEventListener('click', function() {
+            const isExpanded = longText.style.maxHeight !== '20px' && longText.style.maxHeight !== '';
+
+            if (isExpanded) {
+                longText.style.maxHeight = '20px';
+                toggleSpan.textContent = '...view more';
+            } else {
+                longText.style.maxHeight = longText.scrollHeight + 'px';
+                toggleSpan.textContent = 'view less';
+            }
+        });
+    });
+
+    var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    // When the user clicks on the button, scroll to the top of the document
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
 });
