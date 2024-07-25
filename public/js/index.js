@@ -90,6 +90,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.addEventListener('click', function(event) {
         if (event.target.classList.contains('copy-btn')) {
+            // Verifiy if button shows "✔ Copied!"
+            if (event.target.textContent.includes('Copied')) {
+                return;
+            }
+            
             const copyTarget = event.target.getAttribute('data-copytarget');
             const copyText = document.querySelector(copyTarget).textContent;
             const textArea = document.createElement('textarea');
@@ -98,10 +103,17 @@ document.addEventListener('DOMContentLoaded', function() {
             textArea.select();
             document.execCommand('copy');
             document.body.removeChild(textArea);
-            alert('Copied to clipboard: ' + copyText);
+    
+            const originalText = event.target.textContent;
+            event.target.textContent = '✔ Copied!';
+            
+            setTimeout(function() {
+                event.target.textContent = originalText;
+            }, 2000);
         }
     });
-
+    
+    
     document.addEventListener('click', function(event){
         if (event.target.id === 'whatsapp-btn') {
             const phoneNumber = "+5491158056091"; // Reemplaza con tu número de teléfono
